@@ -4,9 +4,9 @@ Ext.define('stocks.Application', {
 	name: 'stocks',
 
 	controllers: 	[ 'MainController' ],
-	stores: 	[ 'Stocks' ],
-	models: 	[ 'Stock' ],
-	views: 		[ 'Main', 'StockGrid' ],
+	stores: 	[ 'Stocks', 'HistoricalData' ],
+	models: 	[ 'Stock', 'HistoricalData' ],
+	views: 		[ 'Main', 'StockGrid', 'HistoricalDataWindow' ],
     
 	launch: function () { }
 });

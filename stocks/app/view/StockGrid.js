@@ -5,6 +5,7 @@ Ext.define('stocks.view.StockGrid', {
 	emptyText: 'Couldnt load stock data',
    	store: 'Stocks',
 	frame: 'true',
+	id: 'stockgrid',
 
 	tbar: [{
 		xtype:'button',
