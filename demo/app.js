@@ -7,16 +7,8 @@ Ext.application({
     name: 'demo',
 
     extend: 'demo.Application',
-
-    requires: [
-        'demo.view.main.Main'
-    ],
-
-    // The name of the initial view to create. With the classic toolkit this class
-    // will gain a "viewport" plugin if it does not extend Ext.Viewport. With the
-    // modern toolkit, the main view will be added to the Viewport.
-    //
-    mainView: 'demo.view.main.Main'
+    
+    autoCreateViewport: 'demo.view.Main'
 	
     //-------------------------------------------------------------------------
     // Most customizations should be made to demo.Application. If you need to

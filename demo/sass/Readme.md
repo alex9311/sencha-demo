@@ -1,6 +1,6 @@
 # ./sass
 
-This folder contains the styling for the application's views.
+This folder contains the styling for the application's views. The primary pi
 
 ## Styling
 
@@ -9,7 +9,8 @@ and required packages (specified in `"app.json"`) with application-defined views
 
 ### ./sass/etc
 
-This folder contains misc. support code for Sass builds (global functions, etc.).
+This folder contains misc. support code for Sass builds (global functions, 
+mixins, etc.).
 
 ### ./sass/src
 
@@ -41,6 +42,3 @@ sprites.
 
 This folder contains the web page used to present all components and states so they
 can be captured as an image and used to produce images for IE8 and 9.
-
-This web page is also helpful when loaded in Chrome to view all components in their
-styled form.
