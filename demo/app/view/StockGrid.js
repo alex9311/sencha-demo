@@ -13,10 +13,12 @@ Ext.define('demo.view.StockGrid', {
 	}],
 
 	columns: [
-		{ text: 'Symbol',	dataIndex: 'symbol', 	flex: 1},
-		{ text: 'Name',  	dataIndex: 'name', 	flex: 1},
-		{ text: 'Price',  	dataIndex: 'price', 	flex: 1},
-		{ text: 'Change',  	dataIndex: 'change', 	flex: 1},
-		{ text: 'Market Cap',  	dataIndex: 'market_cap',flex: 1}
+		{ text: 'Symbol',	dataIndex: 'symbol', 	flex: 1 },
+		{ text: 'Name',  	dataIndex: 'name', 	flex: 1 },
+		{ text: 'Price',  	dataIndex: 'price', 	flex: 1 },
+		{ text: 'Change',  	dataIndex: 'change', 	flex: 1 },
+		{ text: 'Market Cap',  	dataIndex: 'market_cap',flex: 1 },
+		{ text: '52 Week High', dataIndex: 'fiftytwo_week_high', flex: 1 },
+		{ text: '52 Week Low', 	dataIndex: 'fiftytwo_week_low', flex: 1 }
         	],
 });
