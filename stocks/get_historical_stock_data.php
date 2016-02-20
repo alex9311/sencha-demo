@@ -1,21 +1,23 @@
 <?php
 require_once('php-stock-market-api/class.stockMarketAPI.php');
+date_default_timezone_set('America/Los_Angeles');
 
+$stock_symbol = $_GET['stock_symbol'];
 
-$start = '01-01-2015';
+$start = date("m-d-Y",strtotime( '-4 week'));
 $end = date("m-d-Y");
 
 $StockMarketAPI = new StockMarketAPI;
-$StockMarketAPI->symbol = $_GET['stock_symbol'];
+$StockMarketAPI->symbol = $stock_symbol;
 $StockMarketAPI->history = array(
   'start' 	 => $start,
   'end' 	 => $end,
   'interval' => 'd' // Daily
 );
 
-$trimmed_data = current($StockMarketAPI->getData());
-array_shift($trimmed_data);
-$historical_stock_data = json_encode($trimmed_data);
+$hisorical_data = $StockMarketAPI->getData()[$stock_symbol];
+array_shift($hisorical_data);//first element is header names, shift them off the array
+$historical_stock_data = json_encode($hisorical_data);
 
 
 header("Cache-Control: no-cache, must-revalidate");

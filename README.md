@@ -1,8 +1,21 @@
-# sencha-demo
-This is a simple app built with Sencha's EXTJS 5.1.
+#Sencha Demo
+This repository is meant to showcase some sencha EXTJS skills I've taught myself. 
 
+I use Sencha's EXTJS 5.1 here, a slightly older version than what is currently available from [Sencha](https://www.sencha.com/products/extjs/#overview)
+
+Repo should be cloned with the command:
+
+`git clone --recursive https://github.com/alex9311/sencha-demo.git`
+
+The build directories are gitignored so you will need [Sencha CMD](https://www.sencha.com/forum/showthread.php?297477-Sencha-Cmd-5.1.1-GA-is-Now-Available) to rebuild them after cloing. I believe Sencha CMD will complain if a version other than 5.1.1 is used, since that is the ext version used here.
+
+###Stocks Application
 The app shows data in a grid for a set of American stocks. Upon clicking a row, a graph shows recent historical price data for that stock
 
-Use --recursive when cloning the repo to get the php stock api submodule needed to get the data. After cloning, run "sencha app build" from inside the stocks directory. 
+After cloning the repo, run the following to rebuild the build folder to get the application working
 
-Links to download sencha cmd, needed to build the app after cloning, can be found [here](https://www.sencha.com/forum/showthread.php?297477-Sencha-Cmd-5.1.1-GA-is-Now-Available)
+```
+cd stocks
+sencha app build
+```
+See the [application-specific README file](stocks/Readme.md) for an overview of the source code.

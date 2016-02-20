@@ -1,6 +1,6 @@
 Ext.define('stocks.view.HistoricalDataWindow', {
 	extend: 'Ext.window.Window',
-	title: 'Historical Data',
+	title: 'Historical Data - Closing Value',
 	height: 400,
 	width: 750,
 	layout:'border',
@@ -31,7 +31,12 @@ Ext.define('stocks.view.HistoricalDataWindow', {
 			type: "time",
 			position: "bottom",
 			fields: ["date"],
-			title: "Date"
+			title: "Date",
+			renderer:function(string){ 
+				var date = new Date(string);
+				return (date.getMonth()+1)+"/"+date.getDate()+"/"+date.getFullYear().toString().substr(2,2)
+				return date.toDateString();
+			}
 		}],
 		series: [{
 			type: "line",
