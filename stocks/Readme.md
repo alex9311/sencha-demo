@@ -35,10 +35,6 @@ process.
 
 This directory contains the JavaScript files for the application.
 
-#### stocks/resources
-
-This directory contains static resources (typically an `"images"` folder).
-
 #### stocks/overrides
 
 This folder contains override classes. All overrides in this folder will be 
@@ -47,4 +43,4 @@ is loaded.
 
 #### stocks/sass
 
-This folder contains the styling for the application's views. See stocks/sass/Readme.md for details.
+This folder contains the styling for the application's views. See [stocks/sass/Readme.md](sass/Readme.md) for details.
