@@ -1,3 +1,3 @@
 [submodule "php-stock-market-api"] 
-  path = stocks/
+  path = stocks/php-stock-market-api
   url = https://github.com/bmarshall511/php-stock-market-api.git
