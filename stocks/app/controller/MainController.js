@@ -3,8 +3,20 @@ Ext.define('stocks.controller.MainController', {
 	init: function(){
 		this.control({
 			'button[action=reload_stores]'	:	{ click:this.reload_stores },
-			'#stockgrid'			:	{celldblclick:this.historical_stocks}
+			'#stockgrid'			:	{celldblclick:this.historical_stocks},
+			'combo'				:	{select:this.update_chart_series}
 		});
+	},
+
+	update_chart_series:function(combo, records, eOpts){
+		var new_field = records.data.value;
+		var chart_window = combo.up("window");
+		var chart = chart_window.down('chart');
+		var series = chart.getSeries()[0];
+		series.setYField(new_field);
+		chart.getStore().reload();	
+		old_title = chart_window.title;
+		chart_window.setTitle(old_title.substr(0, old_title.indexOf('-'))+" - "+records.data.display);
 	},
 
 	reload_stores:function(){
@@ -13,9 +25,8 @@ Ext.define('stocks.controller.MainController', {
         },
 
 	historical_stocks:function(grid,td, cellIndex, record, tr, rowIndex, e, eOpts){
-		console.log("clicked stocks: "+record.data.symbol);
 		Ext.data.StoreManager.lookup('HistoricalData').load({params:{stock_symbol:record.data.symbol}});
-		Ext.create('stocks.view.HistoricalDataWindow').show();
-
+		var new_window = Ext.create('stocks.view.HistoricalDataWindow').show();
+		new_window.setTitle(record.data.symbol+" - Closing Value");
 	}
 });

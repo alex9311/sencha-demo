@@ -4,6 +4,18 @@ Ext.define('stocks.view.HistoricalDataWindow', {
 	height: 400,
 	width: 750,
 	layout:'border',
+	tbar:[{	
+		xtype:'combo',
+		emptyText:'test test test test',
+		fieldLabel: 'Choose Stock Characteristic',
+		queryMode: 'local',
+		store: new Ext.data.ArrayStore({
+			fields: ['value','display'],
+			data: [['close','Closing Value'],['open','Opening Value'],['high','Highest Value'],['low','Lowest Value'],['volume','Volume'],['adj_close','Adjusted Close']],
+		}),
+		valueField: 'value',
+		displayField: 'display',
+	}],
 	items:[{
 		region:'center',
 		xtype:'chart',
@@ -16,8 +28,8 @@ Ext.define('stocks.view.HistoricalDataWindow', {
 			type: "numeric",
 			minimum: 0,
 			position: "left",
-			fields: ["close"],
-			title: "Value",
+			fields: ['close','open','high','low','volume','adj_close'],
+			title: 'Value',
 			minorTickSteps: 1,
 			grid: {
 				odd: {
@@ -40,15 +52,12 @@ Ext.define('stocks.view.HistoricalDataWindow', {
 		}],
 		series: [{
 			type: "line",
-			highlight: {
-				size: 7,
-				radius: 7
-			},
 			axis: "left",
 			smooth: true,
 			xField: "date",
 			yField: "close",
 			title: "Closing Value",
+			marker: { type: 'circle', size: 4, radius: 4, 'stroke-width': 0 }
 		}]
 	}]
 });
