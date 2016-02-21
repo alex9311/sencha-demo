@@ -6,7 +6,7 @@ Ext.define('stocks.view.HistoricalDataWindow', {
 	layout:'border',
 	tbar:[{	
 		xtype:'combo',
-		emptyText:'test test test test',
+		emptyText:'select',
 		fieldLabel: 'Choose Stock Characteristic',
 		queryMode: 'local',
 		store: new Ext.data.ArrayStore({
