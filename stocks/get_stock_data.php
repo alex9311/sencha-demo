@@ -3,14 +3,10 @@ require_once('php-stock-market-api/class.stockMarketAPI.php');
 
 $stock_symbols = array("AAPL","XOM","MSFT","GOOGL","JNJ","WFC","WMT","GE","PG" ,"JPM","CVX","VZ","FB","KO","PFE","T","ORCL","BAC");
 $all_stock_data = array();
-foreach($stock_symbols as $stock_symbol){
-	$StockMarketAPI = new StockMarketAPI;
-	$StockMarketAPI->symbol = $stock_symbol; 
-	$stock_data = current($StockMarketAPI->getData());
-	$stock_data["symbol"]=$stock_symbol;
-	array_push($all_stock_data,$stock_data);
-}
-$all_stock_data_json = json_encode($all_stock_data);
+$StockMarketAPI = new StockMarketAPI;
+$StockMarketAPI->symbol = $stock_symbols; 
+$stock_data = ($StockMarketAPI->getData());
+$all_stock_data_json = json_encode(array_values($stock_data));
 
 header("Cache-Control: no-cache, must-revalidate");
 header("Expires: Fri, 01 Jul 2013 00:00:00 GMT"); // Date in the past
