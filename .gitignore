@@ -1,2 +1,4 @@
 stocks/build
 stocks/sass/example/bootstrap.json
+.DS_Store
+**/.DS_Store
