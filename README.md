@@ -10,7 +10,7 @@ Repo should be cloned with the command:
 The build directories are gitignored so you will need [Sencha CMD](https://www.sencha.com/forum/showthread.php?297477-Sencha-Cmd-5.1.1-GA-is-Now-Available) to rebuild them after cloing. I believe Sencha CMD will complain if a version other than 5.1.1 is used, since that is the ext version used here.
 
 ###Stocks Application
-<img src='stocks/resources/stocks_historical.png' width="450"/>
+<img src='stocks/resources/stocks-demo.gif' width="450"/>
 
 The app shows data for a set of American stocks. Clicking a row shows a popup graph with   closing value data from the last 20 business days. 
 
