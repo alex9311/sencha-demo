@@ -1,7 +1,5 @@
 #Sencha Demo
-This repository is meant to showcase some sencha EXTJS skills I've taught myself. 
-
-I use Sencha's EXTJS 5.1 here, a slightly older version than what is currently available from [Sencha](https://www.sencha.com/products/extjs/#overview)
+I use Sencha's EXTJS 5.1, a slightly older version than what is currently available from [Sencha](https://www.sencha.com/products/extjs/#overview)
 
 Repo should be cloned with the command:
 
