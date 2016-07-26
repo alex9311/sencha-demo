@@ -10,7 +10,7 @@ The build directories are gitignored so you will need [Sencha CMD](https://www.s
 ###Stocks Application
 <img src='stocks/resources/stocks-demo.gif' width="450"/>
 
-The app shows data for a set of American stocks. Clicking a row shows a popup graph with   closing value data from the last 20 business days. 
+The app shows data for a set of American stocks. The data is loaded from yahoo finance upon each page load or data reload.
 
 After cloning the repo, run the following to rebuild the build folder to get the application working
 
